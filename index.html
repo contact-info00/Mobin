@@ -20,36 +20,37 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      overflow: auto;
     }
 
     .container {
       display: flex;
       align-items: center;
-      gap: 80px;
+      gap: 320px;
+      transform: scale(1); /* can be used to adjust scaling if needed */
     }
 
     .card {
       background: rgba(0, 0, 0, 0.4);
-      padding: 100px 160px;
-      border-radius: 80px;
+      padding: 400px 640px;
+      border-radius: 320px;
       color: white;
-      box-shadow: 0 32px 128px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 128px 512px rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(10px);
       text-align: center;
     }
 
     .card h1 {
-      font-size: 80px;
-      margin-bottom: 60px;
-      letter-spacing: 4px;
+      font-size: 320px;
+      margin-bottom: 240px;
+      letter-spacing: 8px;
     }
 
     .icons {
       display: flex;
       justify-content: center;
-      gap: 100px;
-      font-size: 112px;
+      gap: 400px;
+      font-size: 448px;
     }
 
     .icons a {
@@ -57,11 +58,11 @@
     }
 
     .profile-photo {
-      width: 400px;
-      height: 400px;
+      width: 1600px;
+      height: 1600px;
       border-radius: 50%;
       overflow: hidden;
-      border: 12px solid white;
+      border: 48px solid white;
       flex-shrink: 0;
     }
 
@@ -69,6 +70,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    @media screen and (max-width: 2000px) {
+      body {
+        transform: scale(0.3);
+        transform-origin: top left;
+        height: 300vh;
+      }
     }
   </style>
 </head>
